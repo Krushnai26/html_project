@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .c1 {
+        position: relative;
+        height: 560px;
+        overflow: hidden; /* Hide the overflow to ensure the image doesn't extend beyond the container */
+        background-image: url(https://c4.wallpaperflare.com/wallpaper/134/79/609/boat-purple-sky-reflection-wallpaper-preview.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .c1::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%; /* Adjust the width to control the half-opacity area */
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.3); /* Half-opacity black background */
+        backdrop-filter: blur(2px);
+    }
+
+    .p1 {
+        color: white;
+        font-size: 50px;
+        margin-left: 100px;
+        padding-top: 200px;
+        position: relative;
+        z-index: 2; /* Ensure text is above the background image */
+    }
+
+    .p2 {
+        color: white;
+        padding-top: 5px;
+        margin-left: 100px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .p3 {
+        border-radius: 20px;
+        position: relative;
+        top: 20px;
+        margin-left: 100px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="c1">
+            <P class="p1">HTML & CSS</P>
+            <p class="p2"> Lorem ipsum dolor, sit amet consectetur adipisicing </p>
+            <input class="p3" type="text" placeholder="search">
+        </div>
+    </div>
+</body>
+
+</html>
